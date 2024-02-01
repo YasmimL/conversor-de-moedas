@@ -1,0 +1,9 @@
+header {
+  position: fixed;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  padding: 1.5rem 0;
+  background-color: var(--app-header-background);
+  box-shadow: 2px 1px 2px 0px rgba(204, 204, 204, 0.25);
+}

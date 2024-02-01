@@ -1,1 +1,18 @@
 /* You can add global styles to this file, and also import other style files */
+@import "styles/_variables.scss";
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  background-color: var(--app-background);
+  font-family: "Poppins", Arial;
+}

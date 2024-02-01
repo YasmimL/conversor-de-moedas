@@ -1,0 +1,29 @@
+<div class="card">
+  <div class="card-header">{{ title }}</div>
+
+  <div class="card-body">
+    <app-card-loading *ngIf="status === CardStatus.Loading"></app-card-loading>
+    <app-card-body
+      *ngIf="status === CardStatus.Ready"
+      [currencyRate]="currencyRate"
+    ></app-card-body>
+    <app-card-error
+      *ngIf="status === CardStatus.Error"
+      (retry)="getCurrencyRate()"
+    ></app-card-error>
+  </div>
+
+  <div class="card-footer" *ngIf="status === CardStatus.Ready">
+    <div class="variation">
+      <span>Variação (%)</span>
+      <span>{{ currencyRate?.percentChange | number : "" : "pt-BR" }}</span>
+    </div>
+
+    <div class="separator"></div>
+
+    <div class="updated">
+      <span>Atualizado</span>
+      <span>{{ lastUpdatedAt | date : "HH:mm:ss" }}</span>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,5 @@
+<ng-container *ngIf="currencyRate">
+  <span [ngClass]="{'card-red': currencyRate.value <= 1, 'card-blue': currencyRate.value > 5,
+  'card-green': currencyRate.value > 1 && currencyRate.value <= 5 }">{{ currencyRate.value | currency : "BRL" }}</span>
+</ng-container>
+

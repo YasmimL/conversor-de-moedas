@@ -1,0 +1,65 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 26.875rem;
+  height: 26.75rem;
+  border-radius: 0.625rem;
+  overflow: hidden;
+  background: var(--card-background);
+  box-shadow: 0px 0px 6px 2px rgba(204, 204, 204, 0.25);
+  text-align: center;
+  font-style: normal;
+  line-height: normal;
+
+  &-header {
+    background-color: var(--card-header-background);
+    color: var(--text-basic);
+    font-size: 1.875rem;
+    font-weight: 700;
+    padding: 2.3rem;
+  }
+
+  &-body {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &-footer {
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid var(--separator);
+
+    .variation,
+    .updated {
+      display: flex;
+      flex-direction: column;
+      padding: 1.6rem;
+      flex: 1;
+
+      span {
+        text-align: center;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+      }
+
+      span:first-child {
+        color: var(--text-secondary);
+        font-size: 1.125rem;
+      }
+
+      span:last-child {
+        color: var(--text-basic);
+        font-size: 1.5rem;
+      }
+    }
+
+    .separator {
+      width: 0.0625rem;
+      background-color: var(--separator);
+    }
+  }
+}

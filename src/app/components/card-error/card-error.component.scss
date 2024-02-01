@@ -1,0 +1,34 @@
+.card-error {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  span {
+    color: var(--text-basic);
+    text-align: center;
+    font-size: 1.625rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+
+  button {
+    display: flex;
+    width: 10.8125rem;
+    height: 3.625rem;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1.5rem;
+    border-radius: 0.625rem;
+    background: var(--button-background);
+    cursor: pointer;
+    border: none;
+    color: var(--text-basic);
+    font-size: 1.125rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 1.6875rem;
+    letter-spacing: 0em;
+    text-transform: uppercase;
+  }
+}
