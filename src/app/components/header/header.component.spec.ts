@@ -1,5 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
+import { By } from '@angular/platform-browser';
 import { HeaderComponent } from './header.component';
 
 describe('HeaderComponent', () => {
@@ -8,9 +9,8 @@ describe('HeaderComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ HeaderComponent ]
-    })
-    .compileComponents();
+      declarations: [HeaderComponent],
+    }).compileComponents();
 
     fixture = TestBed.createComponent(HeaderComponent);
     component = fixture.componentInstance;
@@ -19,5 +19,10 @@ describe('HeaderComponent', () => {
 
   it('should create', () => {
     expect(component).toBeTruthy();
+  });
+
+  it('should render a header element', () => {
+    const header = fixture.debugElement.query(By.css('header'))?.nativeElement;
+    expect(header).toBeTruthy();
   });
 });

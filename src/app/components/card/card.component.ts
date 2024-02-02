@@ -17,7 +17,7 @@ export class CardComponent implements OnInit, OnDestroy {
   lastUpdatedAt: Date | null = null;
   updateSubscription: Subscription | null = null;
   status: CardStatus = CardStatus.Loading;
-  timeToLive: number = 18000; //3min
+  timeToLive: number = 180000; //3min
 
   constructor(
     private currencyConverterService: CurrencyConverterService,
