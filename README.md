@@ -1,27 +1,41 @@
-# FreteRapidoChallenge
+# Conversor de Moedas
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.6.
+![Angular](https://img.shields.io/badge/angular-%23DD0031.svg?style=for-the-badge&logo=angular&logoColor=white)
+![TypeScript](https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white)
+![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)
+![SASS](https://img.shields.io/badge/SASS-hotpink.svg?style=for-the-badge&logo=SASS&logoColor=white)
+![RxJS](https://img.shields.io/badge/rxjs-%23B7178C.svg?style=for-the-badge&logo=reactivex&logoColor=white)
+![Jasmine](https://img.shields.io/badge/jasmine-%238A4182.svg?style=for-the-badge&logo=jasmine&logoColor=white)
+![Docker](https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white)
 
-## Development server
+Este projeto mostra a quantia equivalente de uma unidade de cada moeda abaixo em Real Brasileiro (BRL):
+- Dólar Canadense (CAD)
+- Peso Argentino (ARS)
+- Libra Esterlina (GBP)
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+As informações são obtidas a partir da [AwesomeAPI](https://docs.awesomeapi.com.br/api-de-moedas) e são atualizadas automaticamente a cada três minutos.
 
-## Code scaffolding
+## 🚀 Como rodar?
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Para rodar a aplicação, basta acessar a pasta raiz do projeto e seguir as instruções abaixo para criar e acessar um container Docker:
 
-## Build
+1. Criar a imagem docker:<br>
+`docker build -t frete-rapido/frete-rapido-challenge:latest .`
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+2. Iniciar um container a partir da imagem gerada anteriormente:<br> 
+`docker run -d -p 8080:80 frete-rapido/frete-rapido-challenge:latest`
 
-## Running unit tests
+3. Acessar o endereço abaixo em um navegador web:<br>
+`http://localhost:8080/`
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## 🧑‍💻 Como desenvolver?
 
-## Running end-to-end tests
+Para trabalhar no projeto, basta clonar o repositório em sua máquina, acessar a pasta raiz, e rodar o servidor de desenvolvimento através do comando `ng serve -o`.
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+## 🧪 Como rodar as testes unitários?
 
-## Further help
+Na pasta raiz do projeto, execute `ng test` para rodar os testes via [Karma](https://karma-runner.github.io).
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Para verificar a cobertura de testes da aplicação, rode o mesmo comando adicionando a opção `--code-coverage`, como a seguir:<br>
+`ng test --code-coverage`
